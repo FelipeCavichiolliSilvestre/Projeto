@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="cabeçalho">
         <nav class="container">
             <div>
                 <h2>Projeto Indie</h2>
@@ -20,30 +20,29 @@
                 <h4>Felipe Silvestre</h4>
             </div>
         </nav>
+        <button id="switch" onclick="switchMode()"></button>
     </header>
 
     <div id="content">
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
-    <h1>Conteudo</h1>
+        <p>Há muito tempo atrás</p>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <figure>
+            <img src="0.png">   
+            <figcaption><b>Somente um teste</b></figcaption>
+        </figure>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
+        <h1>Conteudo</h1>
     </div>
 
-    <footer>
+    <footer id="rodape">
         <nav class="container">
             <div>
                 <h3>E-mails:</h3>
@@ -57,5 +56,14 @@
             </div>
         </nav>
     </footer>
+
+    <script>
+        function switchMode(){
+            document.getElementById("cabeçalho").classList.toggle("dark");
+            document.getElementById("rodape").classList.toggle("dark");
+            document.querySelector("body").classList.toggle("dark");
+            document.getElementById("conteudo").classList.toggle("dark");
+        }
+    </script>
 </body>
 </html>
