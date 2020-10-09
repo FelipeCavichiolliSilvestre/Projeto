@@ -89,6 +89,10 @@ figure img{
     width: 80%;
 }
 
+figure figcaption{
+    font-size: 20px;
+}
+
 button{
     background-color: #023d56;
 
@@ -111,4 +115,42 @@ button{
 	
 	border-right:190px solid transparent;
 	border-top: 100px solid #ffc12e;
+}
+
+div#indice{
+    width: 33%;
+
+    background-color: #e8f3f7;
+    border: 2px solid #bae3f2;
+
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.dark div#indice{
+    background-color: #085F7F; 
+    border-color: #003749;
+}
+
+div ul li{
+    list-style: none;
+    line-height: 30px;
+}
+
+div ul li a{
+    text-decoration: none;
+    font-size: 19px;
+    color: #2d2d2d;
+}
+
+.dark div ul li a{
+    color: #ffffff;
+}
+
+div ul li a:hover{
+    color:  #ffb200;
+}
+
+div ul li::first-letter{
+    color: black;
 }
