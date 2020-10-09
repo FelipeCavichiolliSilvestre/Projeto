@@ -154,3 +154,12 @@ div ul li a:hover{
 div ul li::first-letter{
     color: black;
 }
+
+.dark div ul li::first-letter{
+    color: #ffffff;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
