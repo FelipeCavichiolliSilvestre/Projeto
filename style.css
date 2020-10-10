@@ -163,3 +163,11 @@ footer a{
     text-decoration: none;
     color: inherit;
 }
+
+img[src = "envelope-solid.svg"]{
+    width: 15px;
+    color: white;
+
+    padding: 0;
+    margin: 0;
+}
