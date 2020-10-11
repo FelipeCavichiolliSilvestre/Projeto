@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" href="svg/terminal-solid.svg">
+
+    
+</head>
+<body>
+
+    <header id="cabeçalho">
+        <span id="triangulo"></span>
+        <nav class="container">
+            <div>
+                <h2>Projeto Indie</h2>
+                <h4>Vinicius Ribeiro</h4>
+                <h4>Carlos Tojeiro</h4>
+            </div>
+
+            <div class="right">
+                <h3><a href="index.html">Página Inicial</a></h3>
+                <h4><a href="cadastro.html">Cadastre-se</a></h4>
+            </div>
+        </nav>
+        <button id="switch" onclick="switchMode()"></button>
+    </header>
+
+    <div id="content">
+
+        <form action="#" onsubmit="modal();return false">
+            <fieldset>
+                <label for="nome">Nome</label>
+                <input placeholder="Lucas" type="text" id="nome" name="nome" required><br><br>
+
+                <label for="snome">Sobrenome</label>
+                <input placeholder="da Silva" type="text" id="snome" name="snome" required><br><br>
+
+                <label for="email">Email</label>
+                <input placeholder="lucasdasilva@dominio.com" type="email" id="email" name="email" required><br><br>
+
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha" placeholder="0-9,a-z,A-Z,!?" required
+                title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula, 1 caractere especial e 8 ou mais caracteres" 
+                pattern="(?=.*\W)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ><br><br>
+                
+                <label for="csenha">Confirme a senha</label>
+                <input placeholder="0-9,a-z,A-Z,!?" type="text" id="csenha" name="csenha" required><br><br>
+
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required><br><br>
+                
+                <div id="checkbox">
+                <input type="checkbox" id="termos" required>
+                <label for="termos">Aceito os Termos de Usos</label>
+                </div><br><br>
+        
+                <div id="checkbox">
+                <input type="checkbox" id="novidades">
+                <label for="novidades">Desejo receber as novidades do projeto indie</label> 
+                </div><br>
+                
+                <input type="submit" value="Concluir">               
+            </fieldset>
+        </form>
+
+    </div>
+
+    <footer id="rodape">
+        <nav class="container">
+            <div>
+                <h3>E-mails:</h3>
+                <p><a href="mailto:felipecavichiollisilvestre@gmail.com"><img src="svg/envelope-solid.svg"> felipecavichiollisilvestre@gmail.com</a></p>
+                <p><a href="mailto:felipecavichiollisilvestre@gmail.com"><img src="svg/envelope-solid.svg"> felipecavichiollisilvestre@gmail.com</a></p>
+            </div>
+
+            <div class="right">
+                <h3>ETEC Centro Paula Souza</h3>
+                <p>1° Desenvolvimento de Sistemas</p>
+                <br>
+                <p>Ícones por <a href="https://fontawesome.com/">Fonts Awesomes</a></p>
+            </div>
+        </nav>
+    </footer>
+
+
+
+    <div class="modal-bg">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="triangulo"></span>
+            </div>
+
+            <div class="modal-content">
+                <img src="svg/check-circle-solid.svg">
+                <h3>Tudo pronto!</h3>
+                <a href="index.html"><button>Voltar para a página Inicial</button></a>
+            </div>
+            
+            
+
+        </div>
+    </div>
+
+    <script>
+        var password = document.getElementById("senha")
+        var confirm_password = document.getElementById("csenha");
+
+        function validatePassword(){
+            if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Senhas diferentes!");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        password.onchange = acceptPassword;
+        confirm_password.onkeyup = validatePassword;
+        
+        function modal(){
+            var modalBg = document.querySelector(".modal-bg");
+            modalBg.classList.add("bg-active");
+        }
+
+        function switchMode(){
+            document.getElementById("cabeçalho").classList.toggle("dark");
+            document.getElementById("rodape").classList.toggle("dark");
+            document.querySelector("body").classList.toggle("dark");
+            document.getElementById("conteudo").classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>
