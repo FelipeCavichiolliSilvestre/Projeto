@@ -44,8 +44,8 @@
 
                 <label for="senha">Senha</label>
                 <input type="text" id="senha" name="senha" placeholder="0-9,a-z,A-Z,!?" required
-                title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula e 8 ou mais caracteres" 
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ><br><br>
+                title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula, 1 caractere especial e 8 ou mais caracteres" 
+                pattern="(?=.*\W)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ><br><br>
                 
                 <label for="csenha">Confirme a senha</label>
                 <input placeholder="0-9,a-z,A-Z,!?" type="text" id="csenha" name="csenha" required><br><br>
@@ -86,8 +86,6 @@
         </nav>
     </footer>
 
-
-
     <div class="modal-bg">
         <div class="modal">
             <div class="modal-header">
@@ -99,39 +97,9 @@
                 <h3>Tudo pronto!</h3>
                 <a href="index.html"><button>Voltar para a página Inicial</button></a>
             </div>
-            
-            
-
         </div>
     </div>
 
-    <script>
-        var password = document.getElementById("senha")
-        var confirm_password = document.getElementById("csenha");
-
-        function validatePassword(){
-            if(password.value != confirm_password.value) {
-                confirm_password.setCustomValidity("Senhas diferentes!");
-            } else {
-                confirm_password.setCustomValidity('');
-            }
-        }
-
-        password.onchange = validatePassword;
-        password.onchange = acceptPassword;
-        confirm_password.onkeyup = validatePassword;
-        
-        function modal(){
-            var modalBg = document.querySelector(".modal-bg");
-            modalBg.classList.add("bg-active");
-        }
-
-        function switchMode(){
-            document.getElementById("cabeçalho").classList.toggle("dark");
-            document.getElementById("rodape").classList.toggle("dark");
-            document.querySelector("body").classList.toggle("dark");
-            document.getElementById("conteudo").classList.toggle("dark");
-        }
-    </script>
+    <script src="js/cadastro.js"></script>
 </body>
 </html>
