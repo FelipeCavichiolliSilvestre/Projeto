@@ -1,0 +1,178 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+p::first-letter{
+    font-weight: bolder;
+}
+
+body{
+    background-color:#dfeff5;
+}
+
+body.dark{
+    background-color:#002a3f;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+
+    background-color: #03577B;
+    color: #ffffff;
+
+    position: relative;
+}
+
+header.dark{
+    background-color: #023d56;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    clear: both;
+
+    background-color:#03577B;
+    color: #ffffff;
+}
+
+footer.dark{
+    background-color: #023d56;
+}
+
+nav div{
+    display: inline-block;
+    padding-top:13px;
+}
+
+div.right{
+    margin-right: 2%;
+    text-align: right;
+    float: right;
+}
+
+h2, h4{
+    padding-top: 2px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+}
+
+nav.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+div#content{
+    width: 60%;
+    margin: 0 auto;
+}
+
+figure{
+    background-color:#9bb9c4;
+    padding-top: 15px; 
+    padding-bottom: 10px;
+    text-align: center;
+
+    width: 40%;
+    margin: 0 auto;
+}
+
+.dark figure{
+    background-color: #085F7F;
+    color: #eee;
+}
+
+figure img{
+    width: 80%;
+}
+
+figure figcaption{
+    font-size: 20px;
+}
+
+button#switch{
+    background-color: #023d56;
+
+    height: 25%;
+    width: 6%;
+
+    position: absolute;
+    bottom: 67%;
+    left: 92%;    
+}
+
+.dark button#switch{
+    background-color: #03577B;
+}
+
+#triangulo{
+    width: 0;
+    height: 0;
+    float: left;
+	
+	border-right:190px solid transparent;
+	border-top: 100px solid #ffc12e;
+}
+
+div#indice{
+    width: 33%;
+
+    background-color: #e8f3f7;
+    border: 2px solid #bae3f2;
+
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.dark div#indice{
+    background-color: #085F7F; 
+    border-color: #003749;
+}
+
+div ul li{
+    list-style: none;
+    line-height: 30px;
+}
+
+div ul li a{
+    text-decoration: none;
+    font-size: 19px;
+    color: #2d2d2d;
+}
+
+.dark div ul li a{
+    color: #ffffff;
+}
+
+div ul li a:hover{
+    color:  #ffb200;
+}
+
+div ul li::first-letter{
+    color: black;
+}
+
+.dark div ul li::first-letter{
+    color: #ffffff;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img[src = "svg/envelope-solid.svg"]{
+    width: 15px;
+    color: white;
+
+    padding: 0;
+    margin: 0;
+}
