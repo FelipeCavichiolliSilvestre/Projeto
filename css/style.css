@@ -188,7 +188,7 @@ img[src = "svg/envelope-solid.svg"]{
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(0deg, #b78900, #F2CB05);
+    background: linear-gradient(0deg,#F2B705, #F2CB05);
     border-radius: 15px;
 }
 
