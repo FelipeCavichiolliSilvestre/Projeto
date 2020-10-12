@@ -75,6 +75,7 @@ div#checkbox label{
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s , opacity 0.5s;
+    z-index: 2;
 }
 
 .bg-active{
