@@ -176,3 +176,71 @@ img[src = "svg/envelope-solid.svg"]{
     padding: 0;
     margin: 0;
 }
+
+::-webkit-scrollbar{
+    width: 25px;
+    background-color: #00374f;
+}
+
+::-webkit-scrollbar-track{
+    border: 7px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(0deg, #b78900, #F2CB05);
+    border-radius: 15px;
+}
+
+div#bars{
+    margin: 0;
+    padding: 0;
+    background-color: silver;
+
+    z-index: 1;
+    height: 2vh;
+    position: sticky;
+    top: -1px;
+}
+
+div#progress-bar{
+    margin: 0;
+    padding: 0;
+    height: 2vh;
+    width: 0%;
+    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+#progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    filter: blur(3px);
+}
+
+#progress-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    filter: blur(3px);
+}
+
+@keyframes animate{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(0deg);
+    }
+}
