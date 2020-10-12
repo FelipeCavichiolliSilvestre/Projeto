@@ -23,6 +23,9 @@
         </nav>
         <button id="switch" onclick="switchMode()"></button>
     </header>
+    <div id="bars">
+        <div id="progress-bar"></div> 
+    </div>
 
     <div id="content">
         <div id="indice">
@@ -70,13 +73,6 @@
         
     </footer>
 
-    <script>
-        function switchMode(){
-            document.getElementById("cabeçalho").classList.toggle("dark");
-            document.getElementById("rodape").classList.toggle("dark");
-            document.querySelector("body").classList.toggle("dark");
-            document.getElementById("conteudo").classList.toggle("dark");
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
