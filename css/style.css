@@ -178,7 +178,7 @@ img[src = "svg/envelope-solid.svg"]{
 }
 
 ::-webkit-scrollbar{
-    width: 25px;
+    width: 15px;
     background-color: #00374f;
 }
 
@@ -205,9 +205,9 @@ div#bars{
 
 div#progress-bar{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     height: 2vh;
-    width: 0%;
+    width: 0;
     background-image: linear-gradient(to right, #008aff,#00ffe7);
     animation: animate 5s linear infinite;
 }
