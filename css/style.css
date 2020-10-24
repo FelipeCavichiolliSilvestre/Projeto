@@ -118,6 +118,7 @@ figure figcaption{
 
 button#switch{
     background-color: #023d56;
+    cursor: pointer;
 
     height: 25%;
     width: 6%;
@@ -230,6 +231,7 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     padding: 0; 
     height: 2vh;
     width: 0;
+    max-width: 100%;
     background-color: aqua;
     background-image: linear-gradient(to right, #008aff,#00ffe7);
 
@@ -271,6 +273,16 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
 @media (max-width: 950px){
     #triangulo{
         display: none;
+    }
+
+    footer .container .right{
+        float: none;
+        text-align: left;
+    }
+
+    footer{
+        height: 200px;
+        display: block;
     }
 }
 
