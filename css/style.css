@@ -271,10 +271,24 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
 }
 
 @media (max-width: 950px){
+    div#content{
+        width: 96%;
+    }
+
+    div#content h1{
+        text-indent: 10px;
+    }
+
     #triangulo{
         display: none;
     }
 
+    #rodape nav{
+        width: 80%;
+    }
+}
+
+@media (max-width: 670px){
     footer .container .right{
         float: none;
         text-align: left;
@@ -284,9 +298,7 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
         height: 200px;
         display: block;
     }
-}
-
-@media (max-width: 670px){
+    
     div#indice{
         width: 90%;
     }
