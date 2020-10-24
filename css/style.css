@@ -1,15 +1,16 @@
+/*Classe .dark adicionada por JavaScript, serve para alterar para o modo escuro*/
+
 * {
     margin : 0;
     padding: 0;
+    font-family: sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 a{
     text-decoration: none;
     color: inherit;
-}
-
-p::first-letter{
-    font-weight: bolder;
 }
 
 body{
@@ -31,7 +32,7 @@ header {
     position: relative;
 }
 
-header.dark{
+.dark header{
     background-color: #023d56;
 }
 
@@ -44,7 +45,7 @@ footer{
     color: #ffffff;
 }
 
-footer.dark{
+.dark footer{
     background-color: #023d56;
 }
 
@@ -73,6 +74,22 @@ nav.container{
 div#content{
     width: 60%;
     margin: 0 auto;
+}
+
+div#content p{
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+div#content h1{
+    font-size: 30px;
+    position: relative;
+}
+
+div#content span{ /*Posiciona o span(que é a âncora) um pouco acima do h1*/
+    position: absolute;
+    top: -4vh;
+    left: 0;
 }
 
 figure{
@@ -177,6 +194,7 @@ img[src = "svg/envelope-solid.svg"]{
     margin: 0;
 }
 
+/*Scroll-Bar*/
 ::-webkit-scrollbar{
     width: 15px;
     background-color: #00374f;
@@ -187,60 +205,58 @@ img[src = "svg/envelope-solid.svg"]{
     box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{ 
     background: linear-gradient(0deg,#F2B705, #F2CB05);
     border-radius: 15px;
 }
 
-div#bars{
+
+/*Barra de progresso*/
+div#bars{ /*O caminho da barra, cinza e ocupa toda a largura da tela*/
     margin: 0;
     padding: 0;
     background-color: silver;
 
     z-index: 1;
+    width: 100%;
     height: 2vh;
-    position: sticky;
+    position: sticky; 
     top: -1px;
 }
 
-div#progress-bar{
+div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     margin: 0;
     padding: 0; 
     height: 2vh;
     width: 0;
+    background-color: aqua;
     background-image: linear-gradient(to right, #008aff,#00ffe7);
-    animation: animate 5s linear infinite;
+
+    filter: blur(); /*Apenas para posicionar o before e o after, n me pergunte, eu testei e só funciona assim*/
 }
 
-#progress-bar::before{
+#progress-bar::before{ /*Cria um 2° background para borra-lo e criar um efeito de luz*/
     content: "";
+    /*Posiciona ele absolutamente e sei tamanho é o mesmo da barra de progresso*/
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    /*Cria o background e o borra*/
     background-image: linear-gradient(to right, #008aff,#00ffe7);
     filter: blur(3px);
 }
 
-#progress-bar::after{
+#progress-bar::after{ /*Cria um 3° background para borra-lo e criar um efeito de luz*/
     content: "";
+    /*Posiciona ele absolutamente e sei tamanho é o mesmo da barra de progresso*/
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    /*Cria o background e o borra*/
     background-image: linear-gradient(to right, #008aff,#00ffe7);
     filter: blur(3px);
-}
-
-@keyframes animate{
-    0%,100%
-    {
-        filter: hue-rotate(0deg);
-    }
-    50%
-    {
-        filter: hue-rotate(0deg);
-    }
 }
