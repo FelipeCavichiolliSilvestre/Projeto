@@ -74,6 +74,7 @@ nav.container{
 div#content{
     width: 60%;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 div#content p{
@@ -135,7 +136,7 @@ button#switch{
     height: 0;
     float: left;
 	
-	border-right:190px solid transparent;
+	border-right: 190px solid transparent;
 	border-top: 100px solid #ffc12e;
 }
 
@@ -259,4 +260,26 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     /*Cria o background e o borra*/
     background-image: linear-gradient(to right, #008aff,#00ffe7);
     filter: blur(3px);
+}
+
+@media (max-width: 1050px){
+    div#indice{
+        width: 60%;
+    }
+}
+
+@media (max-width: 950px){
+    #triangulo{
+        display: none;
+    }
+}
+
+@media (max-width: 670px){
+    div#indice{
+        width: 90%;
+    }
+
+    nav.container{
+        width: 70%;
+    }
 }
