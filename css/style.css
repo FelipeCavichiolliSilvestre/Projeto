@@ -262,7 +262,7 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     filter: blur(3px);
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1150px){
     div#indice{
         width: 60%;
     }
