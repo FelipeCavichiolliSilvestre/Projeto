@@ -135,7 +135,7 @@ div#checkbox label{
 }
 
 .modal-content img{
-    width: 40%;
+    width: 150px;
 
     position: absolute;
 
@@ -175,8 +175,18 @@ div#checkbox label{
     border: 6px solid rgba(0,0,0,0.3);
 }
 
+@media (max-width: 1150px){
+    .modal-content button{
+        height: 70px;
+    }
+}
+
 @media (max-width: 950px){
     fieldset{
         width: 100%;
+    }
+
+    .modal{
+        width: 60%;
     }
 }
