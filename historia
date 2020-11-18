@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Projeto Indie</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="svg/terminal-solid.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="stick">
+            <header id="cabeçalho">
+                <span id="triangulo"></span>
+                <nav class="container">
+                    <div>
+                        <h2>Projeto Indie</h2>
+                        <h4>Vinicius Ribeiro</h4>
+                        <h4>Carlos Tojeiro</h4>
+                    </div>
+
+                    <div class="right">
+                        <svg viewBox="0 0 448 512" onclick="callMenu()">
+                            <path
+                                fill="white"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                            ></path>
+                        </svg>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Barra de progesso da página-->
+            <div id="bars">
+                <!-- Essa div é o caminho da barra-->
+                <div id="progress-bar"></div>
+                <!-- Essa div é o caminho da barra-->
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="icons">
+                <svg
+                    onclick="callMenu()"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 477.175 477.175"
+                >
+                    <path
+                        d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+            c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"
+                    ></path>
+                </svg>
+
+                <svg onclick="switchMode()" viewBox="0 0 512 512">
+                    <path
+                        fill="white"
+                        d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+                    ></path>
+                </svg>
+            </div>
+
+            <h1><a href="index.html">Página Inicial</a></h1>
+            <h1><a href="cadastro.html">Cadastre-se</a></h1>
+            <h1><a href="#">Login</a></h1>
+
+            <ul>
+                <li>
+                    <h1>Páginas</h1>
+                    <ul>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="#">Novos consoles</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="indice">
+                <ul>
+                    <li><a href="#AlanTuring">1 Alan Turing</a></li>
+                    <li><a href="#Bombe">2 O Bombe</a></li>
+                    <li><a href="#Maquina">3 Máquina e teste de Turing</a></li>
+                    <li><a href="#CompAtuais">4 Computadores atuais</a></li>
+                    <li><a href="#CompQuant">5 Computação Quântica</a></li>
+                </ul>
+            </div>
+
+            <h1><span id="AlanTuring"></span>Turing</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Alan Turing foi um renomado matemático, cientista da computação
+                e criptoanalista, os seus estudos são a base tecnologia moderna,
+                os seus projetos e contribuições culminaram nos mais variados
+                tipos de computadores. Desde os computadores quânticos até ao
+                seu micro-ondas.
+            </p>
+
+            <p>
+                Aos 30 anos ele foi contratado por uma organização inglesa para
+                decifrar mensagens encriptadas pelos alemães antes da 2° Guerra
+                Mundial.
+            </p>
+
+            <br /><br />
+
+            <h1><span id="Bombe"></span>Bombe</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Bombe foi a máquina criada por Turing para a decriptação das
+                mensagens, e ela era incrivelmente eficiente, muito mais rápida
+                do que os computadores(os profissionais) eram capazes de
+                decriptografar.
+            </p>
+
+            <p>
+                O sistema da bombe usava mecanismos eletromecânicos e era
+                extremamente avançado para sua época. Por isso, ele é muitas
+                vezes considerado como o primeiro computador da história.
+            </p>
+
+            <br /><br />
+
+            <h1><span id="Maquina"></span>A Máquina e o Teste De Turing</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                O reconhecimento de Alan Turing veio após a criação da sua
+                “máquina automática”, chamada agora de máquina de Turing. A
+                ideia do equipamento era bastante simples: o aparelho devia ser
+                capaz de manipular símbolos em uma fita de acordo com uma série
+                de regras para guardar informações. Esse é o mesmo princípio que
+                ainda é utilizado nos computadores, e em todas as linguagens de
+                programação.
+            </p>
+            <p>
+                O teste de Turing também é famoso, ele serve para definir o
+                nível de inteligência de uma IA. O teste é extremamente simples,
+                ele se trata de uma interação entre o humano e a máquina. Se o
+                humano não conseguir diferenciar se o interlocutor é uma
+                máquina, a inteligência artificial é considerada inteligente de
+                fato.
+            </p>
+
+            <br /><br />
+
+            <h1><span id="CompAtuais"></span>Computadores atuais</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Os computadores eletrônicos ainda possuem as mesmas
+                características dos computadores da máquina de Turing E dos
+                profissionais computadores. Eles recebem dados, eles tratam
+                esses dados seguindo determinadas regras e eles exibem esses
+                dados.
+            </p>
+            <p>Entrada &rarr; processamento &rarr; saída.</p>
+
+            <br /><br />
+
+            <h1><span id="CompQuant"></span>Computação quântica</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Muitas vezes vemos pessoas falando que a computação quântica
+                será o futuro dos computadores. Porém não é bem assim. De fato,
+                computadores quânticos são mais rápidos do que os convencionais,
+                porém somente em algumas situações. Como no caso de contas
+                matemáticas ou de uma pesquisa em um banco de dados gigante.
+            </p>
+            <p>
+                Mas nos outros aspectos, em especial no processamento de
+                imagens, ele fica na mesma linha que os computadores comuns.
+                Então não espere que usares computadores quânticos para jogar
+                vídeo game, ou eu nenhum outro aspecto diário. Ele é muito mais
+                funcional para empresas e servidores.
+            </p>
+
+            <br /><br /><br /><br />
+        </div>
+
+        <footer id="rodape">
+            <nav class="container">
+                <div>
+                    <h3>E-mails:</h3>
+                    <p>
+                        <a href="mailto:felipecavichiollisilvestre@gmail.com"
+                            ><img src="svg/envelope-solid.svg" />
+                            felipecavichiollisilvestre@gmail.com</a
+                        >
+                    </p>
+                    <p>
+                        <a href="mailto:antoniogsztt@gmail.com"
+                            ><img src="svg/envelope-solid.svg" />
+                            antoniogsztt@gmail.com</a
+                        >
+                    </p>
+                </div>
+
+                <div class="right">
+                    <h3>ETEC Centro Paula Souza</h3>
+                    <p>1° Desenvolvimento de Sistemas</p>
+                    <br />
+                    <p>
+                        Ícones por
+                        <a href="https://fontawesome.com/">Fonts Awesomes</a>
+                    </p>
+                </div>
+            </nav>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
