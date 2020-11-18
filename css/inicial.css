@@ -1,0 +1,109 @@
+body {
+    position: relative;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-color: #002a3f;
+    /*background-image: linear-gradient(
+        to bottom right,
+        #ffc12e 50%,
+        #002a3f 50%
+    );*/
+}
+
+body.dark {
+    background-color: #03577b;
+}
+
+svg#menu {
+    width: 5%;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+}
+
+#logo {
+    width: 100%;
+}
+
+#logo svg:nth-child(1) {
+    width: 50%;
+}
+
+#logo svg:nth-child(2) {
+    width: 43%;
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    animation: putInPlace 1.5s ease forwards 4.5s;
+}
+
+#text {
+    width: 30%;
+    position: absolute;
+    top: 53%;
+    left: 57%;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+#text * {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 6s;
+}
+
+#text p {
+    font-size: 17px;
+}
+
+#text p:last-child {
+    text-align: right;
+}
+
+@keyframes anim {
+    80%,
+    100% {
+        fill: transparent;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+@keyframes putInPlace {
+    to {
+        transform: translate(-50%, 0);
+        top: 10%;
+        left: 30%;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#half {
+    width: 0;
+    height: 0;
+    float: left;
+    z-index: -2;
+
+    border-right: 100vw solid transparent;
+    border-top: 100vh solid #ffc12e;
+}
