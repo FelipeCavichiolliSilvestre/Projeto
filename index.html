@@ -1,113 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset='utf-8'>
-    <title>Projeto Indie</title>    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="svg/terminal-solid.svg">
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Projeto Indie</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="inicial.css" />
+        <link rel="icon" href="svg/terminal-solid.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
 
-    <header id="cabeçalho">
-        <span id="triangulo"></span>
-        <nav class="container">
-            <div>
-                <h2>Projeto Indie</h2>
-                <h4>Vinicius Ribeiro</h4>
-                <h4>Carlos Tojeiro</h4>
+    <body>
+        <svg id="menu" viewBox="0 0 448 512" onclick="callMenu()">
+            <path
+                fill="white"
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+        </svg>
+
+        <div class="menu">
+            <div class="icons">
+                <svg
+                    onclick="callMenu()"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 477.175 477.175"
+                >
+                    <path
+                        d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+            c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"
+                    ></path>
+                </svg>
+
+                <svg onclick="switchMode()" viewBox="0 0 512 512">
+                    <path
+                        fill="white"
+                        d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+                    ></path>
+                </svg>
             </div>
 
-            <div class="right">
-                <h3><a href="index.html">Página Inicial</a></h3>
-                <h4><a href="cadastro.html">Cadastre-se</a></h4>
-            </div>
-        </nav>
-        <button id="switch" onclick="switchMode()"></button>
-    </header>
+            <h1><a href="index.html">Página Inicial</a></h1>
+            <h1><a href="cadastro.html">Cadastre-se</a></h1>
+            <h1><a href="#">Login</a></h1>
 
-    <!-- Barra de progesso da página-->
-    <div id="bars"> <!-- Essa div é o caminho da barra-->
-        <div id="progress-bar"></div> <!-- Essa div é o caminho da barra-->
-    </div>
-
-    <div id="content">
-        <div id="indice">
             <ul>
-                <li><a href="#AlanTuring">1 Alan Turing</a></li>
-                <li><a href="#Bombe">2 O Bombe</a></li>
-                <li><a href="#Maquina">3 Máquina e teste de Turing</a></li>
-                <li><a href="#CompAtuais">4 Computadores atuais</a></li>
-                <li><a href="#CompQuant">5 Computação Quântica</a></li>
+                <li>
+                    <h1>Páginas</h1>
+                    <ul>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="#">Novos consoles</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
-        <h1><span id="AlanTuring"></span>Turing</h1> <!--O span estará posicionado acima do h1 por CSS-->
-        <p>Alan Turing foi um renomado matemático, cientista da computação e criptoanalista, os seus estudos são a base 
-        tecnologia moderna, os seus projetos e contribuições culminaram nos mais variados tipos de computadores. Desde os
-        computadores quânticos até ao seu micro-ondas.</p>
+        <div id="logo">
+            <svg
+                width="669"
+                height="123"
+                viewBox="-5 -5 674 128"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M14.8184 67.252V109H0.755859V2.35938H40.0869C51.7568 2.35938 60.8877 5.33789 67.4795 11.2949C74.1201 17.252 77.4404 25.1377 77.4404 34.9521C77.4404 45.3037 74.1934 53.2871 67.6992 58.9023C61.2539 64.4688 52.001 67.252 39.9404 67.252H14.8184ZM14.8184 55.7529H40.0869C47.6064 55.7529 53.3682 53.9951 57.3721 50.4795C61.376 46.915 63.3779 41.7881 63.3779 35.0986C63.3779 28.751 61.376 23.6729 57.3721 19.8643C53.3682 16.0557 47.875 14.0781 40.8926 13.9316H14.8184V55.7529Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M138.996 65.8604H113.947V109H99.8115V2.35938H135.114C147.126 2.35938 156.354 5.09375 162.8 10.5625C169.294 16.0312 172.541 23.9902 172.541 34.4395C172.541 41.0801 170.734 46.8662 167.121 51.7979C163.557 56.7295 158.576 60.416 152.18 62.8574L177.229 108.121V109H162.141L138.996 65.8604ZM113.947 54.3613H135.554C142.536 54.3613 148.078 52.5547 152.18 48.9414C156.33 45.3281 158.405 40.4941 158.405 34.4395C158.405 27.8477 156.428 22.7939 152.473 19.2783C148.566 15.7627 142.902 13.9805 135.48 13.9316H113.947V54.3613Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M278.848 59.1221C278.848 69.5713 277.09 78.7021 273.574 86.5146C270.059 94.2783 265.078 100.211 258.633 104.312C252.188 108.414 244.668 110.465 236.074 110.465C227.676 110.465 220.229 108.414 213.735 104.312C207.241 100.162 202.188 94.2783 198.574 86.6611C195.01 78.9951 193.179 70.1328 193.081 60.0742V52.3838C193.081 42.1299 194.863 33.0723 198.428 25.2109C201.992 17.3496 207.021 11.3438 213.516 7.19336C220.059 2.99414 227.529 0.894531 235.928 0.894531C244.473 0.894531 251.992 2.96973 258.486 7.12012C265.029 11.2217 270.059 17.2031 273.574 25.0645C277.09 32.877 278.848 41.9834 278.848 52.3838V59.1221ZM264.858 52.2373C264.858 39.5908 262.319 29.8984 257.241 23.1602C252.163 16.373 245.059 12.9795 235.928 12.9795C227.041 12.9795 220.034 16.373 214.907 23.1602C209.829 29.8984 207.217 39.2734 207.07 51.2852V59.1221C207.07 71.3779 209.634 81.0215 214.761 88.0527C219.937 95.0352 227.041 98.5264 236.074 98.5264C245.156 98.5264 252.188 95.2305 257.168 88.6387C262.148 81.998 264.712 72.501 264.858 60.1475V52.2373Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M349.119 2.35938H363.255V77.8721C363.255 88.0771 360.179 96.0605 354.026 101.822C347.923 107.584 339.769 110.465 329.563 110.465C318.968 110.465 310.716 107.755 304.808 102.335C298.899 96.915 295.945 89.3223 295.945 79.5566H310.008C310.008 85.6602 311.668 90.4209 314.988 93.8389C318.357 97.2568 323.216 98.9658 329.563 98.9658C335.374 98.9658 340.062 97.1348 343.626 93.4727C347.239 89.8105 349.07 84.6836 349.119 78.0918V2.35938Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M451.983 59.708H405.768V97.501H459.454V109H391.705V2.35938H458.722V13.9316H405.768V48.209H451.983V59.708Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M556.605 13.9316H522.328V109H508.339V13.9316H474.135V2.35938H556.605V13.9316Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M656.906 59.1221C656.906 69.5713 655.148 78.7021 651.633 86.5146C648.117 94.2783 643.137 100.211 636.691 104.312C630.246 108.414 622.727 110.465 614.133 110.465C605.734 110.465 598.288 108.414 591.794 104.312C585.3 100.162 580.246 94.2783 576.633 86.6611C573.068 78.9951 571.237 70.1328 571.14 60.0742V52.3838C571.14 42.1299 572.922 33.0723 576.486 25.2109C580.051 17.3496 585.08 11.3438 591.574 7.19336C598.117 2.99414 605.588 0.894531 613.986 0.894531C622.531 0.894531 630.051 2.96973 636.545 7.12012C643.088 11.2217 648.117 17.2031 651.633 25.0645C655.148 32.877 656.906 41.9834 656.906 52.3838V59.1221ZM642.917 52.2373C642.917 39.5908 640.378 29.8984 635.3 23.1602C630.222 16.373 623.117 12.9795 613.986 12.9795C605.1 12.9795 598.093 16.373 592.966 23.1602C587.888 29.8984 585.275 39.2734 585.129 51.2852V59.1221C585.129 71.3779 587.692 81.0215 592.819 88.0527C597.995 95.0352 605.1 98.5264 614.133 98.5264C623.215 98.5264 630.246 95.2305 635.227 88.6387C640.207 81.998 642.771 72.501 642.917 60.1475V52.2373Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+            </svg>
 
-        <p>Aos 30 anos ele foi contratado por uma organização inglesa para decifrar mensagens encriptadas pelos alemães 
-        antes da 2° Guerra Mundial.</p>
+            <svg
+                width="373"
+                height="107"
+                viewBox="-5 -5 378 115"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M14.7842 107H0.72168V0.359375H14.7842V107Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M127.023 107H112.888L59.2012 24.8223V107H45.0654V0.359375H59.2012L113.034 82.9033V0.359375H127.023V107Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M156.499 107V0.359375H186.602C195.879 0.359375 204.082 2.41016 211.211 6.51172C218.34 10.6133 223.833 16.4482 227.69 24.0166C231.597 31.585 233.574 40.2764 233.623 50.0908V56.9023C233.623 66.9609 231.67 75.7744 227.764 83.3428C223.906 90.9111 218.364 96.7217 211.138 100.774C203.96 104.827 195.586 106.902 186.016 107H156.499ZM170.562 11.9316V95.501H185.356C196.196 95.501 204.619 92.1318 210.625 85.3936C216.68 78.6553 219.707 69.0605 219.707 56.6094V50.3838C219.707 38.2744 216.851 28.875 211.138 22.1855C205.474 15.4473 197.417 12.0293 186.968 11.9316H170.562Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M274.524 107H260.462V0.359375H274.524V107Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+                <path
+                    d="M365.084 57.708H318.868V95.501H372.555V107H304.806V0.359375H371.822V11.9316H318.868V46.209H365.084V57.708Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                />
+            </svg>
+        </div>
 
-        <br><br>
+        <div id="half"></div>
+        <div id="text">
+            <h1>Bem vindo!!</h1>
+            <p>Nós queremos te manter por dentro das novidades tecnológicas.</p>
+            <p>
+                Possuimos diversos conteúdos, como: tutoriais, notícias, dicas e
+                reviews.
+            </p>
+            <p>Clique no ícone do menu, e faça a escolha da sua página.</p>
+            <p>Você pode também alterar entre o modo escuro e claro.</p>
+            <p>
+                Assinado: <br />Felipe Silvestre <br />Antônio Galo <br />
+                João
+            </p>
+        </div>
 
-        <h1><span id="Bombe"></span>Bombe</h1><!--O span estará posicionado acima do h1 por CSS-->
-        <p>Bombe foi a máquina criada por Turing para a decriptação das mensagens, e ela era incrivelmente eficiente, 
-        muito mais rápida do que os computadores(os profissionais) eram capazes de decriptografar.</p>
-
-        <p>O sistema da bombe usava mecanismos eletromecânicos e era extremamente avançado para sua época. Por isso, 
-        ele é muitas vezes considerado como o primeiro computador da história.</p>
-
-        <br><br>
-
-        <h1><span id="Maquina"></span>A Máquina e o Teste De Turing</h1><!--O span estará posicionado acima do h1 por CSS-->
-        <p>O reconhecimento de Alan Turing veio após a criação da sua “máquina automática”, chamada agora de máquina 
-        de Turing. A ideia do equipamento era bastante simples: o aparelho devia ser capaz de manipular símbolos em 
-        uma fita de acordo com uma série de regras para guardar informações. Esse é o mesmo princípio que ainda é 
-        utilizado nos computadores, e em todas as linguagens de programação.</p>
-        <p>O teste de Turing também é famoso, ele serve para definir o nível de inteligência de uma IA. O teste é 
-        extremamente simples, ele se trata de uma interação entre o humano e a máquina. Se o humano não conseguir
-        diferenciar se o interlocutor é uma máquina, a inteligência artificial é considerada inteligente de fato.</p>
-
-        <br><br>
-
-        <h1><span id="CompAtuais"></span>Computadores atuais</h1><!--O span estará posicionado acima do h1 por CSS-->
-        <p>Os computadores eletrônicos ainda possuem as mesmas características dos computadores da máquina de Turing E 
-        dos profissionais computadores. Eles recebem dados, eles tratam esses dados seguindo determinadas regras e 
-        eles exibem esses dados.</p>
-        <p>Entrada &rarr; processamento &rarr; saída.</p>
-
-        <br><br>
-
-        <h1><span id="CompQuant"></span>Computação quântica</h1><!--O span estará posicionado acima do h1 por CSS-->
-        <p>Muitas vezes vemos pessoas falando que a computação quântica será o futuro dos computadores. Porém não é bem 
-        assim. De fato, computadores quânticos são mais rápidos do que os convencionais, porém somente em algumas 
-        situações. Como no caso de contas matemáticas ou de uma pesquisa em um banco de dados gigante.</p>
-        <p>Mas nos outros aspectos, em especial no processamento de imagens, ele fica na mesma linha que os computadores 
-        comuns. Então não espere que usares computadores quânticos para jogar vídeo game, ou eu nenhum outro aspecto 
-        diário. Ele é muito mais funcional para empresas e servidores.</p>
-
-        <br><br><br><br>
-    </div>
-
-    <footer id="rodape">
-        <nav class="container">
-            <div>
-                <h3>E-mails:</h3>
-                <p><a href="mailto:felipecavichiollisilvestre@gmail.com"><img src="svg/envelope-solid.svg"> felipecavichiollisilvestre@gmail.com</a></p>
-                <p><a href="mailto:antoniogsztt@gmail.com"><img src="svg/envelope-solid.svg"> antoniogsztt@gmail.com</a></p>
-            </div>
-
-            <div class="right">
-                <h3>ETEC Centro Paula Souza</h3>
-                <p>1° Desenvolvimento de Sistemas</p>
-                <br>
-                <p>Ícones por <a href="https://fontawesome.com/">Fonts Awesomes</a></p>
-            </div>
-        </nav>
-        
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
+        <script src="js/script.js"></script>
+        <script>
+            var caminhos = document.querySelectorAll("#logo svg path");
+            var delay = 0.2;
+            caminhos.forEach(function (i) {
+                i.style.strokeDasharray = i.getTotalLength() + "px";
+                i.style.strokeDashoffset = i.getTotalLength() + "px";
+                i.style.animation =
+                    "anim 1.5s ease forwards" + " " + delay + "s";
+                delay = delay + 0.2;
+            });
+        </script>
+    </body>
 </html>
