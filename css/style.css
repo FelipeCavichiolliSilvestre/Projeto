@@ -1,101 +1,201 @@
 /*Classe .dark adicionada por JavaScript, serve para alterar para o modo escuro*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-    margin : 0;
+    margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "roboto", sans-serif;
 
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-body{
-    background-color:#dfeff5;
+body {
+    background-color: #dfeff5;
 }
 
-body.dark{
-    background-color:#002a3f;
+body.dark {
+    background-color: #002a3f;
     color: #ffffff;
+}
+
+div.stick {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header {
     width: 100%;
     height: 100px;
 
-    background-color: #03577B;
+    background-color: #03577b;
     color: #ffffff;
-
-    position: relative;
 }
 
-.dark header{
+.dark header {
     background-color: #023d56;
 }
 
-footer{
+footer {
     width: 100%;
     height: 100px;
     clear: both;
 
-    background-color:#03577B;
+    background-color: #03577b;
     color: #ffffff;
 }
 
-.dark footer{
+.dark footer {
     background-color: #023d56;
 }
 
-nav div{
+nav div {
     display: inline-block;
-    padding-top:13px;
+    padding-top: 13px;
 }
 
-div.right{
+div.right {
     margin-right: 2%;
     text-align: right;
     float: right;
 }
 
-h2, h4{
+header nav div.right {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    background-color: black;
+    position: relative;
+}
+
+div.right svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    height: 40%;
+    cursor: pointer;
+}
+
+.menu {
+    background-color: #033b53;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    height: 100vh;
+    width: 50%;
+    z-index: 11;
+
+    transition: right 0.7s ease-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* overflow: scroll;
+    overflow-x: hidden; */
+}
+
+.menu.open {
+    right: 0;
+}
+
+.menu h1 {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    width: 100%;
+    margin-top: 30px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li ul {
+    display: none;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.menu ul li:hover ul {
+    display: initial;
+}
+
+.menu .icons {
+    width: 90%;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.menu .icons svg {
+    width: 17%;
+    max-width: 70px;
+
+    margin: 5%;
+    fill: white;
+    cursor: pointer;
+
+    transform: rotate(180deg);
+    transition: all 0.5s linear;
+}
+
+.dark .menu .icons svg:nth-child(2) {
+    transform: rotate(0);
+}
+
+h2,
+h4 {
     padding-top: 2px;
     margin-bottom: 3px;
     margin-left: 6px;
 }
 
-nav.container{
+nav.container {
     width: 60%;
     margin: 0 auto;
 }
 
-div#content{
+div#content {
     width: 60%;
     margin: 0 auto;
     min-height: 100vh;
 }
 
-div#content p{
+div#content p {
     padding: 5px 0;
     font-size: 20px;
 }
 
-div#content h1{
+div#content h1 {
     font-size: 30px;
     position: relative;
 }
 
-div#content span{ /*Posiciona o span(que é a âncora) um pouco acima do h1*/
+div#content span {
+    /*Posiciona o span(que é a âncora) um pouco acima do h1*/
     position: absolute;
-    top: -4vh;
+    top: calc(-4vh - 100px);
     left: 0;
 }
 
-figure{
-    background-color:#9bb9c4;
-    padding-top: 15px; 
+figure {
+    background-color: #9bb9c4;
+    padding-top: 15px;
     padding-bottom: 10px;
     text-align: center;
 
@@ -103,45 +203,29 @@ figure{
     margin: 0 auto;
 }
 
-.dark figure{
-    background-color: #085F7F;
+.dark figure {
+    background-color: #085f7f;
     color: #eee;
 }
 
-figure img{
+figure img {
     width: 80%;
 }
 
-figure figcaption{
+figure figcaption {
     font-size: 20px;
 }
 
-button#switch{
-    background-color: #023d56;
-    cursor: pointer;
-
-    height: 25%;
-    width: 6%;
-
-    position: absolute;
-    bottom: 67%;
-    left: 92%;    
-}
-
-.dark button#switch{
-    background-color: #03577B;
-}
-
-#triangulo{
+#triangulo {
     width: 0;
     height: 0;
     float: left;
-	
-	border-right: 190px solid transparent;
-	border-top: 100px solid #ffc12e;
+
+    border-right: 190px solid transparent;
+    border-top: 100px solid #ffc12e;
 }
 
-div#indice{
+div#indice {
     width: 33%;
 
     background-color: #e8f3f7;
@@ -151,44 +235,44 @@ div#indice{
     margin: 40px 0;
 }
 
-.dark div#indice{
-    background-color: #085F7F; 
+.dark div#indice {
+    background-color: #085f7f;
     border-color: #003749;
 }
 
-div ul li{
+div#indice ul li {
     list-style: none;
     line-height: 30px;
 }
 
-div ul li a{
+div#indice ul li a {
     text-decoration: none;
     font-size: 19px;
     color: #2d2d2d;
 }
 
-.dark div ul li a{
+.dark div#indice ul li a {
     color: #ffffff;
 }
 
-div ul li a:hover{
-    color:  #ffb200;
+div#indice ul li a:hover {
+    color: #ffb200;
 }
 
-div ul li::first-letter{
+div#indice ul li::first-letter {
     color: black;
 }
 
-.dark div ul li::first-letter{
+.dark div#indice ul li::first-letter {
     color: #ffffff;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: inherit;
 }
 
-img[src = "svg/envelope-solid.svg"]{
+img[src="svg/envelope-solid.svg"] {
     width: 15px;
     color: white;
 
@@ -197,24 +281,24 @@ img[src = "svg/envelope-solid.svg"]{
 }
 
 /*Scroll-Bar*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 15px;
     background-color: #00374f;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     border: 7px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 2.5px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar-thumb{ 
-    background: linear-gradient(0deg,#F2B705, #F2CB05);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #f2b705, #f2cb05);
     border-radius: 15px;
 }
 
-
 /*Barra de progresso*/
-div#bars{ /*O caminho da barra, cinza e ocupa toda a largura da tela*/
+div#bars {
+    /*O caminho da barra, cinza e ocupa toda a largura da tela*/
     margin: 0;
     padding: 0;
     background-color: silver;
@@ -222,23 +306,25 @@ div#bars{ /*O caminho da barra, cinza e ocupa toda a largura da tela*/
     z-index: 1;
     width: 100%;
     height: 2vh;
-    position: sticky; 
-    top: -1px;
 }
 
-div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
+div#progress-bar {
+    /*Esse é o elemento que terá a width modificada*/
     margin: 0;
-    padding: 0; 
+    padding: 0;
     height: 2vh;
     width: 0;
     max-width: 100%;
     background-color: aqua;
-    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    background-image: linear-gradient(to right, #008aff, #00ffe7);
 
-    filter: blur(); /*Apenas para posicionar o before e o after, n me pergunte, eu testei e só funciona assim*/
+    filter: blur(
+
+    ); /*Apenas para posicionar o before e o after, n me pergunte, eu testei e só funciona assim*/
 }
 
-#progress-bar::before{ /*Cria um 2° background para borra-lo e criar um efeito de luz*/
+#progress-bar::before {
+    /*Cria um 2° background para borra-lo e criar um efeito de luz*/
     content: "";
     /*Posiciona ele absolutamente e sei tamanho é o mesmo da barra de progresso*/
     position: absolute;
@@ -247,11 +333,12 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     height: 100%;
     width: 100%;
     /*Cria o background e o borra*/
-    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    background-image: linear-gradient(to right, #008aff, #00ffe7);
     filter: blur(3px);
 }
 
-#progress-bar::after{ /*Cria um 3° background para borra-lo e criar um efeito de luz*/
+#progress-bar::after {
+    /*Cria um 3° background para borra-lo e criar um efeito de luz*/
     content: "";
     /*Posiciona ele absolutamente e sei tamanho é o mesmo da barra de progresso*/
     position: absolute;
@@ -260,50 +347,60 @@ div#progress-bar{ /*Esse é o elemento que terá a width modificada*/
     height: 100%;
     width: 100%;
     /*Cria o background e o borra*/
-    background-image: linear-gradient(to right, #008aff,#00ffe7);
+    background-image: linear-gradient(to right, #008aff, #00ffe7);
     filter: blur(3px);
 }
 
-@media (max-width: 1150px){
-    div#indice{
+@media (max-width: 1150px) {
+    div#indice {
         width: 60%;
     }
 }
 
-@media (max-width: 950px){
-    div#content{
+@media (max-width: 950px) {
+    div#content {
         width: 96%;
     }
 
-    div#content h1{
+    div#content h1 {
         text-indent: 10px;
     }
 
-    #triangulo{
+    #triangulo {
         display: none;
     }
 
-    #rodape nav{
+    #rodape nav {
         width: 80%;
+    }
+
+    .menu {
+        right: -70%;
+        width: 70%;
     }
 }
 
-@media (max-width: 670px){
-    footer .container .right{
+@media (max-width: 670px) {
+    footer .container .right {
         float: none;
         text-align: left;
     }
 
-    footer{
+    footer {
         height: 200px;
         display: block;
     }
-    
-    div#indice{
+
+    div#indice {
         width: 90%;
     }
 
-    nav.container{
+    nav.container {
         width: 70%;
+    }
+
+    .menu {
+        right: -100%;
+        width: 100%;
     }
 }
