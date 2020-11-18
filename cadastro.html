@@ -1,111 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cadastro.css">
-    <link rel="icon" href="svg/terminal-solid.svg">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cadastro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/cadastro.css" />
+        <link rel="icon" href="svg/terminal-solid.svg" />
+    </head>
+    <body>
+        <!-- Modal que será exibido quando o formulario for enviado-->
+        <div class="modal-bg">
+            <div class="modal">
+                <div class="modal-header">
+                    <span class="triangulo"></span>
+                </div>
 
-    
-</head>
-<body>
-
-    <div class="modal-bg">
-        <div class="modal">
-            <div class="modal-header">
-                <span class="triangulo"></span>
-            </div>
-            
-            <div class="modal-content">
-                <img src="svg/check-circle-solid.svg">
-                <h3>Tudo pronto!</h3>
-                <a href="index.html"><button>Voltar para a página Inicial</button></a>
+                <div class="modal-content">
+                    <img src="svg/check-circle-solid.svg" />
+                    <h3>Tudo pronto!</h3>
+                    <a href="index.html"
+                        ><button>Voltar para a página Inicial</button></a
+                    >
+                </div>
             </div>
         </div>
-    </div>
 
-    <header id="cabeçalho">
-        <span id="triangulo"></span>
-        <nav class="container">
-            <div>
-                <h2>Projeto Indie</h2>
-                <h4>Vinicius Ribeiro</h4>
-                <h4>Carlos Tojeiro</h4>
+        <div class="stick">
+            <header id="cabeçalho">
+                <span id="triangulo"></span>
+                <nav class="container">
+                    <div>
+                        <h2>Projeto Indie</h2>
+                        <h4>Vinicius Ribeiro</h4>
+                        <h4>Carlos Tojeiro</h4>
+                    </div>
+
+                    <div class="right">
+                        <svg viewBox="0 0 448 512" onclick="callMenu()">
+                            <path
+                                fill="white"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                            ></path>
+                        </svg>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Barra de progesso da página-->
+            <div id="bars">
+                <!-- Essa div é o caminho da barra-->
+                <div id="progress-bar"></div>
+                <!-- Essa div é o caminho da barra-->
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="icons">
+                <svg
+                    onclick="callMenu()"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 477.175 477.175"
+                >
+                    <path
+                        d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+            c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"
+                    ></path>
+                </svg>
+
+                <svg onclick="switchMode()" viewBox="0 0 512 512">
+                    <path
+                        fill="white"
+                        d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+                    ></path>
+                </svg>
             </div>
 
-            <div class="right">
-                <h3><a href="index.html">Página Inicial</a></h3>
-                <h4><a href="cadastro.html">Cadastre-se</a></h4>
-            </div>
-        </nav>
-        <button id="switch" onclick="switchMode()"></button>
-    </header>
+            <h1><a href="index.html">Página Inicial</a></h1>
+            <h1><a href="cadastro.html">Cadastre-se</a></h1>
+            <h1><a href="#">Login</a></h1>
 
-    <div id="bars">
-        <div id="progress-bar"></div> 
-    </div>
+            <ul>
+                <li>
+                    <h1>Páginas</h1>
+                    <ul>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="#">Novos consoles</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-    <div id="content">
+        <div id="content">
+            <form action="#" onsubmit="pedidoEnviado();return false">
+                <!-- Não recarrega a página e exibe o modal-->
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input
+                        placeholder="Lucas"
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                    /><br /><br />
 
-        <form action="#" onsubmit="modal();return false">
-            <fieldset>
-                <label for="nome">Nome</label>
-                <input placeholder="Lucas" type="text" id="nome" name="nome" required><br><br>
+                    <label for="snome">Sobrenome</label>
+                    <input
+                        placeholder="da Silva"
+                        type="text"
+                        id="snome"
+                        name="snome"
+                        required
+                    /><br /><br />
 
-                <label for="snome">Sobrenome</label>
-                <input placeholder="da Silva" type="text" id="snome" name="snome" required><br><br>
+                    <label for="email">Email</label>
+                    <input
+                        placeholder="lucasdasilva@dominio.com"
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    /><br /><br />
 
-                <label for="email">Email</label>
-                <input placeholder="lucasdasilva@dominio.com" type="email" id="email" name="email" required><br><br>
+                    <label for="senha">Senha</label>
+                    <input
+                        type="text"
+                        id="senha"
+                        name="senha"
+                        placeholder="0-9,a-z,A-Z,!?"
+                        required
+                        title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula, 1 caractere especial e 8 ou mais caracteres"
+                        pattern="(?=.*\W)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    /><br /><br />
 
-                <label for="senha">Senha</label>
-                <input type="text" id="senha" name="senha" placeholder="0-9,a-z,A-Z,!?" required
-                title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula, 1 caractere especial e 8 ou mais caracteres" 
-                pattern="(?=.*\W)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ><br><br>
-                
-                <label for="csenha">Confirme a senha</label>
-                <input placeholder="0-9,a-z,A-Z,!?" type="text" id="csenha" name="csenha" required><br><br>
+                    <label for="csenha">Confirme a senha</label>
+                    <input
+                        placeholder="0-9,a-z,A-Z,!?"
+                        type="text"
+                        id="csenha"
+                        name="csenha"
+                        required
+                    /><br /><br />
 
-                <label for="nascimento">Data de nascimento</label>
-                <input type="date" id="nascimento" name="nascimento" required><br><br>
-                
-                <div id="checkbox">
-                <input type="checkbox" id="termos" required>
-                <label for="termos">Aceito os Termos de Usos</label>
-                </div><br><br>
-        
-                <div id="checkbox">
-                <input type="checkbox" id="novidades">
-                <label for="novidades">Desejo receber as novidades do projeto indie</label> 
-                </div><br>
-                
-                <input type="submit" value="Concluir">               
-            </fieldset>
-        </form>
+                    <label for="nascimento">Data de nascimento</label>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    /><br /><br />
 
-    </div>
+                    <div id="checkbox">
+                        <input type="checkbox" id="termos" required />
+                        <label for="termos">Aceito os Termos de Usos</label>
+                    </div>
+                    <br /><br />
 
-    <footer id="rodape">
-        <nav class="container">
-            <div>
-                <h3>E-mails:</h3>
-                <p><a href="mailto:felipecavichiollisilvestre@gmail.com"><img src="svg/envelope-solid.svg"> felipecavichiollisilvestre@gmail.com</a></p>
-                <p><a href="mailto:felipecavichiollisilvestre@gmail.com"><img src="svg/envelope-solid.svg"> felipecavichiollisilvestre@gmail.com</a></p>
-            </div>
+                    <div id="checkbox">
+                        <input type="checkbox" id="novidades" />
+                        <label for="novidades"
+                            >Desejo receber as novidades do projeto indie</label
+                        >
+                    </div>
+                    <br />
 
-            <div class="right">
-                <h3>ETEC Centro Paula Souza</h3>
-                <p>1° Desenvolvimento de Sistemas</p>
-                <br>
-                <p>Ícones por <a href="https://fontawesome.com/">Fonts Awesomes</a></p>
-            </div>
-        </nav>
-    </footer>
+                    <input type="submit" value="Concluir" />
+                </fieldset>
+            </form>
+        </div>
 
-    
-    <script src="js/script.js"></script>
-    <script src="js/cadastro.js"></script>
-</body>
+        <footer id="rodape">
+            <nav class="container">
+                <div>
+                    <h3>E-mails:</h3>
+                    <p>
+                        <a href="mailto:felipecavichiollisilvestre@gmail.com"
+                            ><img src="svg/envelope-solid.svg" />
+                            felipecavichiollisilvestre@gmail.com</a
+                        >
+                    </p>
+                    <p>
+                        <a href="mailto:felipecavichiollisilvestre@gmail.com"
+                            ><img src="svg/envelope-solid.svg" />
+                            felipecavichiollisilvestre@gmail.com</a
+                        >
+                    </p>
+                </div>
+
+                <div class="right">
+                    <h3>ETEC Centro Paula Souza</h3>
+                    <p>1° Desenvolvimento de Sistemas</p>
+                    <br />
+                    <p>
+                        Ícones por
+                        <a href="https://fontawesome.com/">Fonts Awesomes</a>
+                    </p>
+                </div>
+            </nav>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/cadastro.js"></script>
+    </body>
 </html>
