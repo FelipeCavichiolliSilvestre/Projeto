@@ -3,22 +3,19 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-color: #002a3f;
-    /*background-image: linear-gradient(
-        to bottom right,
-        #ffc12e 50%,
-        #002a3f 50%
-    );*/
 }
 
 body.dark {
     background-color: #03577b;
 }
 
-svg#menu {
+svg#menuIcon {
     width: 5%;
     position: absolute;
     top: 5%;
     left: 85%;
+
+    cursor: pointer;
 }
 
 #logo {
