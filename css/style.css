@@ -135,7 +135,7 @@ div.right svg {
     justify-content: center;
 }
 
-.menu .icons {
+.menu .icons-div {
     width: 90%;
 
     display: flex;
@@ -143,20 +143,45 @@ div.right svg {
     margin-bottom: 30px;
 }
 
-.menu .icons svg {
+.menu .icons-div .icon {
+    position: relative;
     width: 17%;
-    max-width: 70px;
 
     margin: 5%;
-    fill: white;
+    /*fill: white;*/
     cursor: pointer;
 
     transform: rotate(180deg);
     transition: all 0.5s linear;
+
+    overflow: hidden;
 }
 
-.dark .menu .icons svg:nth-child(2) {
-    transform: rotate(0);
+.menu .icons-div .icon svg:not(:nth-child(1)) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu .icons-div .icon svg {
+    margin: 10px;
+    transition: all 0.5s linear;
+    fill: white;
+}
+
+.menu .icons-div .icon:nth-child(2) svg:nth-child(2) {
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+.dark .menu .icons-div .icon:nth-child(2) svg:nth-child(2) {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.dark .menu .icons-div .icon:nth-child(2) svg:nth-child(3) {
+    transform: translateY(-150%);
+    opacity: 0;
 }
 
 h2,
