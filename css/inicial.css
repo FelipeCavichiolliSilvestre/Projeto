@@ -2,11 +2,11 @@ body {
     position: relative;
     height: 100vh;
     background-repeat: no-repeat;
-    background-color: #002a3f;
+    background-color: #03577b;
 }
 
 body.dark {
-    background-color: #03577b;
+    background-color: #002a3f;
 }
 
 svg#menuIcon {
