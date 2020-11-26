@@ -16,7 +16,7 @@ a {
 }
 
 body {
-    background-color: #dfeff5;
+    background-color: #ffffff;
 }
 
 body.dark {
@@ -216,6 +216,7 @@ div#content p {
 }
 
 div#content h1 {
+    margin: 60px 0 15px 0;
     font-size: 30px;
     position: relative;
 }
@@ -227,13 +228,19 @@ div#content span {
     left: 0;
 }
 
+div#content ul:not(:nth-child(1)) li {
+    list-style: none;
+    text-indent: 20px;
+    margin: 10px;
+}
+
 figure {
     background-color: #9bb9c4;
     padding-top: 15px;
     padding-bottom: 10px;
     text-align: center;
 
-    width: 40%;
+    width: auto;
     margin: 0 auto;
 }
 
