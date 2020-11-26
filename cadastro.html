@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8" />
-        <title>Cadastro</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Projeto Indie</title>
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/cadastro.css" />
         <link rel="icon" href="svg/terminal-solid.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body class="dark">
-        <!-- Modal que será exibido quando o formulario for enviado-->
-        <div class="modal-bg dark">
-            <div class="modal">
-                <div class="modal-header">
-                    <span class="triangulo"></span>
-                </div>
-
-                <div class="modal-content">
-                    <img src="svg/check-circle-solid.svg" />
-                    <h3>Tudo pronto!</h3>
-                    <a href="index.html"
-                        ><button>Voltar para a página Inicial</button></a
-                    >
-                </div>
-            </div>
-        </div>
-
         <div class="stick">
             <header id="cabeçalho">
                 <span id="triangulo"></span>
@@ -109,81 +91,96 @@
         </div>
 
         <div id="content">
-            <form action="#" onsubmit="pedidoEnviado();return false">
-                <!-- Não recarrega a página e exibe o modal-->
-                <fieldset>
-                    <label for="nome">Nome</label>
-                    <input
-                        placeholder="Lucas"
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        required
-                    /><br /><br />
+            <div id="indice">
+                <ul>
+                    <li><a href="#AlanTuring">1 Alan Turing</a></li>
+                    <li><a href="#Bombe">2 O Bombe</a></li>
+                    <li><a href="#Maquina">3 Máquina e teste de Turing</a></li>
+                    <li><a href="#CompAtuais">4 Computadores atuais</a></li>
+                    <li><a href="#CompQuant">5 Computação Quântica</a></li>
+                </ul>
+            </div>
 
-                    <label for="snome">Sobrenome</label>
-                    <input
-                        placeholder="da Silva"
-                        type="text"
-                        id="snome"
-                        name="snome"
-                        required
-                    /><br /><br />
+            <h1><span id="AlanTuring"></span>Turing</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Alan Turing foi um renomado matemático, cientista da computação
+                e criptoanalista, os seus estudos são a base tecnologia moderna,
+                os seus projetos e contribuições culminaram nos mais variados
+                tipos de computadores. Desde os computadores quânticos até ao
+                seu micro-ondas.
+            </p>
 
-                    <label for="email">Email</label>
-                    <input
-                        placeholder="lucasdasilva@dominio.com"
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    /><br /><br />
+            <p>
+                Aos 30 anos ele foi contratado por uma organização inglesa para
+                decifrar mensagens encriptadas pelos alemães antes da 2° Guerra
+                Mundial.
+            </p>
 
-                    <label for="senha">Senha</label>
-                    <input
-                        type="text"
-                        id="senha"
-                        name="senha"
-                        placeholder="0-9,a-z,A-Z,!?"
-                        required
-                        title="É preciso conter ao menos 1 número, 1 letra maiúscula, 1 letra minúscula, 1 caractere especial e 8 ou mais caracteres"
-                        pattern="(?=.*\W)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    /><br /><br />
+            <h1><span id="Bombe"></span>Bombe</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Bombe foi a máquina criada por Turing para a decriptação das
+                mensagens, e ela era incrivelmente eficiente, muito mais rápida
+                do que os computadores(os profissionais) eram capazes de
+                decriptografar.
+            </p>
 
-                    <label for="csenha">Confirme a senha</label>
-                    <input
-                        placeholder="0-9,a-z,A-Z,!?"
-                        type="text"
-                        id="csenha"
-                        name="csenha"
-                        required
-                    /><br /><br />
+            <p>
+                O sistema da bombe usava mecanismos eletromecânicos e era
+                extremamente avançado para sua época. Por isso, ele é muitas
+                vezes considerado como o primeiro computador da história.
+            </p>
 
-                    <label for="nascimento">Data de nascimento</label>
-                    <input
-                        type="date"
-                        id="nascimento"
-                        name="nascimento"
-                        required
-                    /><br /><br />
+            <h1><span id="Maquina"></span>A Máquina e o Teste De Turing</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                O reconhecimento de Alan Turing veio após a criação da sua
+                “máquina automática”, chamada agora de máquina de Turing. A
+                ideia do equipamento era bastante simples: o aparelho devia ser
+                capaz de manipular símbolos em uma fita de acordo com uma série
+                de regras para guardar informações. Esse é o mesmo princípio que
+                ainda é utilizado nos computadores, e em todas as linguagens de
+                programação.
+            </p>
+            <p>
+                O teste de Turing também é famoso, ele serve para definir o
+                nível de inteligência de uma IA. O teste é extremamente simples,
+                ele se trata de uma interação entre o humano e a máquina. Se o
+                humano não conseguir diferenciar se o interlocutor é uma
+                máquina, a inteligência artificial é considerada inteligente de
+                fato.
+            </p>
 
-                    <div id="checkbox">
-                        <input type="checkbox" id="termos" required />
-                        <label for="termos">Aceito os Termos de Usos</label>
-                    </div>
-                    <br /><br />
+            <h1><span id="CompAtuais"></span>Computadores atuais</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Os computadores eletrônicos ainda possuem as mesmas
+                características dos computadores da máquina de Turing E dos
+                profissionais computadores. Eles recebem dados, eles tratam
+                esses dados seguindo determinadas regras e eles exibem esses
+                dados.
+            </p>
+            <p>Entrada &rarr; processamento &rarr; saída.</p>
 
-                    <div id="checkbox">
-                        <input type="checkbox" id="novidades" />
-                        <label for="novidades"
-                            >Desejo receber as novidades do projeto indie</label
-                        >
-                    </div>
-                    <br />
+            <h1><span id="CompQuant"></span>Computação quântica</h1>
+            <!--O span estará posicionado acima do h1 por CSS-->
+            <p>
+                Muitas vezes vemos pessoas falando que a computação quântica
+                será o futuro dos computadores. Porém não é bem assim. De fato,
+                computadores quânticos são mais rápidos do que os convencionais,
+                porém somente em algumas situações. Como no caso de contas
+                matemáticas ou de uma pesquisa em um banco de dados gigante.
+            </p>
+            <p>
+                Mas nos outros aspectos, em especial no processamento de
+                imagens, ele fica na mesma linha que os computadores comuns.
+                Então não espere que usares computadores quânticos para jogar
+                vídeo game, ou eu nenhum outro aspecto diário. Ele é muito mais
+                funcional para empresas e servidores.
+            </p>
 
-                    <input type="submit" value="Concluir" />
-                </fieldset>
-            </form>
+            <h1></h1>
         </div>
 
         <footer id="rodape">
@@ -210,13 +207,14 @@
                     <br />
                     <p>
                         Ícones por
-                        <a href="https://fontawesome.com/">Fonts Awesomes</a>
+                        <a href="https://fontawesome.com/" target="_blank"
+                            >Fonts Awesomes</a
+                        >
                     </p>
                 </div>
             </nav>
         </footer>
 
         <script src="js/script.js"></script>
-        <script src="js/cadastro.js"></script>
     </body>
 </html>
